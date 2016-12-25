@@ -18,8 +18,7 @@ $.ajax({url:url ,
                   quote.innerHTML = data[0].content ;
                   $("body").animate({backgroundColor : colors[Math.floor(Math.random() * 8)] } , 800);
                   // change the a tag href attribute according to the quote
-                  let quoteWithoutSpaces = data[0].content.replace(/\s/g, '%20') , authorWithoutSpaces = data[0].title.replace(/\s/g, '%20') ;
-                  $('#tweet').attr('href' , 'https://twitter.com/intent/tweet?text=' + quoteWithoutSpaces + '%20%20by%20%20' + authorWithoutSpaces) ;
+                  $('#tweet').attr('href','https://twitter.com/intent/tweet?text=' +  data[0].content + '%20%20by%20%20' + data[0].title) ;
         }
        })
 
@@ -32,8 +31,7 @@ getNewQuote.onclick = function(){
                   quote.innerHTML = data[0].content ;
                   $("body").animate({backgroundColor : colors[Math.floor(Math.random() * 8)] } , 800);
                   // change the a tag href attribute according to the quote
-                  let quoteWithoutSpaces = data[0].content.replace(/\s/g, '%20') , authorWithoutSpaces = data[0].title.replace(/\s/g, '%20') ;
-                  $('#tweet').attr('href' , 'https://twitter.com/intent/tweet?text=' + quoteWithoutSpaces + '%20%20by%20%20' + authorWithoutSpaces) ;
+                  $('#tweet').attr('href','https://twitter.com/intent/tweet?text=' +  data[0].content + '%20%20by%20%20' + data[0].title) ;
         }
        })
 };
